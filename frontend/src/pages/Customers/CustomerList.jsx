@@ -75,12 +75,12 @@ export default function CustomerList() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <div className="text-3xl font-extrabold text-gray-900 tracking-tight">Customers</div>
-          <div className="text-[15px] font-medium text-gray-500 mt-1">Manage customer directory</div>
+          <div className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Customers</div>
+          <div className="text-sm sm:text-[15px] font-medium text-gray-500 mt-1">Manage customer directory</div>
         </div>
-        <Button className="font-bold py-3 shadow-md" onClick={openAdd}>Add Customer</Button>
+        <Button className="w-full sm:w-auto font-bold py-3 shadow-md" onClick={openAdd}>Add Customer</Button>
       </div>
 
       <Card className="p-0 border-t-4 border-t-[#3E8B6F] overflow-hidden">
@@ -88,7 +88,7 @@ export default function CustomerList() {
           <div className="p-10"><Loader /></div>
         ) : (
           <div className="overflow-x-auto px-6 pb-6">
-            <table className="w-full text-left text-sm mt-4">
+            <table className="w-full text-left text-sm mt-4 whitespace-nowrap">
               <thead>
                 <tr className="text-gray-400 font-bold border-b border-gray-100">
                   <th className="pb-3 pr-4 uppercase tracking-wider text-xs">Name</th>

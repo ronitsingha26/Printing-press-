@@ -59,13 +59,13 @@ export default function Reports() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col gap-4">
         <div>
-           <div className="text-3xl font-extrabold text-gray-900 tracking-tight">Reports</div>
-           <div className="text-[15px] font-medium text-gray-500 mt-1">Revenue, profit, and job distribution</div>
+          <div className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Reports</div>
+          <div className="text-sm sm:text-[15px] font-medium text-gray-500 mt-1">Revenue, profit, and job distribution</div>
         </div>
-        <div className="flex flex-wrap items-end gap-3 bg-gray-50 p-2 border border-gray-100 shadow-sm rounded-2xl">
-          <label className="text-sm font-semibold text-gray-500 ml-2">
+        <div className="flex flex-wrap items-end gap-3 bg-gray-50 p-3 border border-gray-100 shadow-sm rounded-2xl w-full">
+          <label className="text-sm font-semibold text-gray-500 flex flex-col sm:flex-row sm:items-center gap-1">
             Range
             <select
               className={inputClasses}
@@ -77,7 +77,7 @@ export default function Reports() {
               <option value={90}>90 days</option>
             </select>
           </label>
-          <label className="text-sm font-semibold text-gray-500">
+          <label className="text-sm font-semibold text-gray-500 flex flex-col sm:flex-row sm:items-center gap-1">
             From
             <input
               className={inputClasses}
@@ -86,7 +86,7 @@ export default function Reports() {
               onChange={(e) => setFrom(e.target.value)}
             />
           </label>
-          <label className="text-sm font-semibold text-gray-500 mr-2">
+          <label className="text-sm font-semibold text-gray-500 flex flex-col sm:flex-row sm:items-center gap-1">
             To
             <input
               className={inputClasses}

@@ -63,9 +63,9 @@ export default function JobDetail() {
   return (
     <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1fr_420px]">
       <div className="space-y-6">
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-3">
           <div>
-            <div className="text-3xl font-extrabold text-gray-900 tracking-tight">Job #{job.id}</div>
+            <div className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Job #{job.id}</div>
             <div className="mt-1 text-[15px] font-medium text-gray-500">{job.customer_name || "-"}</div>
           </div>
           <Badge tone={job.status}>{String(job.status).toUpperCase()}</Badge>
@@ -89,9 +89,9 @@ export default function JobDetail() {
           </div>
         </Card>
 
-        <div className="flex flex-wrap gap-3">
-          <Button className="font-bold py-3 shadow-md" onClick={downloadPdf}>Download Quotation PDF</Button>
-          <Button variant="ghost" className="font-semibold py-3" onClick={toInvoice}>
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+          <Button className="w-full sm:w-auto font-bold py-3 shadow-md" onClick={downloadPdf}>Download Quotation PDF</Button>
+          <Button variant="ghost" className="w-full sm:w-auto font-semibold py-3" onClick={toInvoice}>
             Convert to Invoice
           </Button>
         </div>

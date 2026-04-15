@@ -108,8 +108,8 @@ export default function NewJob() {
     <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1fr_420px]">
       <div className="space-y-6">
         <div>
-          <div className="text-3xl font-extrabold text-gray-900 tracking-tight">New Job</div>
-          <div className="text-[15px] font-medium text-gray-500 mt-1">Create a job and get an instant quotation</div>
+          <div className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">New Job</div>
+          <div className="text-sm sm:text-[15px] font-medium text-gray-500 mt-1">Create a job and get an instant quotation</div>
         </div>
 
         <Card>
@@ -293,12 +293,12 @@ export default function NewJob() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-6 border-t border-gray-100">
-              <Button type="submit" className="font-bold py-3 shadow-md">Generate Quotation</Button>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-6 border-t border-gray-100">
+              <Button type="submit" className="w-full sm:w-auto font-bold py-3 shadow-md">Generate Quotation</Button>
               <Button
                 type="button"
                 variant="ghost"
-                className="py-3 font-semibold"
+                className="w-full sm:w-auto py-3 font-semibold"
                 onClick={handleSubmit(async (values) => {
                   const payload = {
                     ...values,

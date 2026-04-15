@@ -38,15 +38,15 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <div className="text-3xl font-extrabold text-gray-900 tracking-tight">Dashboard</div>
-          <div className="text-[15px] font-medium text-gray-500 mt-1">
+          <div className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Dashboard</div>
+          <div className="text-sm sm:text-[15px] font-medium text-gray-500 mt-1">
             Automate Your Printing Costs. Maximize Profit. Eliminate Errors.
           </div>
         </div>
-        <Link to="/jobs/new">
-          <Button className="font-bold py-3 shadow-md">+ New Job</Button>
+        <Link to="/jobs/new" className="w-full sm:w-auto">
+          <Button className="w-full sm:w-auto font-bold py-3 shadow-md">+ New Job</Button>
         </Link>
       </div>
 
@@ -87,7 +87,7 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="overflow-x-auto px-6 pb-6">
-              <table className="w-full text-left text-sm">
+              <table className="w-full text-left text-sm whitespace-nowrap">
                 <thead>
                   <tr className="text-gray-400 font-bold border-b border-gray-100">
                     <th className="pb-3 pr-4 uppercase tracking-wider text-xs">Customer</th>

@@ -72,13 +72,13 @@ export default function JobList() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <div className="text-3xl font-extrabold text-gray-900 tracking-tight">Jobs</div>
-          <div className="text-[15px] font-medium text-gray-500 mt-1">Manage quotes, invoices, and status</div>
+          <div className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Jobs</div>
+          <div className="text-sm sm:text-[15px] font-medium text-gray-500 mt-1">Manage quotes, invoices, and status</div>
         </div>
-        <Link to="/jobs/new">
-          <Button className="font-bold py-3 shadow-md">New Job</Button>
+        <Link to="/jobs/new" className="w-full sm:w-auto">
+          <Button className="w-full sm:w-auto font-bold py-3 shadow-md">New Job</Button>
         </Link>
       </div>
 
@@ -122,7 +122,7 @@ export default function JobList() {
           <div className="p-10"><Loader /></div>
         ) : (
           <div className="overflow-x-auto px-6 pb-6">
-            <table className="w-full text-left text-sm mt-4">
+            <table className="w-full text-left text-sm mt-4 whitespace-nowrap">
               <thead>
                 <tr className="text-gray-400 font-bold border-b border-gray-100">
                   <th className="pb-3 pr-4 uppercase tracking-wider text-xs">Job ID</th>

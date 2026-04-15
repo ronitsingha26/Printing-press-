@@ -91,8 +91,8 @@ export default function PricingConfig() {
   return (
     <div className="space-y-6">
       <div>
-        <div className="text-3xl font-extrabold text-gray-900 tracking-tight">Pricing Config</div>
-        <div className="text-[15px] font-medium text-gray-500 mt-1">Manage GSM rates, finishing, wastage and profit</div>
+        <div className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Pricing Config</div>
+        <div className="text-sm sm:text-[15px] font-medium text-gray-500 mt-1">Manage GSM rates, finishing, wastage and profit</div>
       </div>
 
       <Card>
@@ -102,7 +102,7 @@ export default function PricingConfig() {
         ) : (
           <>
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-sm">
+              <table className="w-full text-left text-sm whitespace-nowrap">
                 <thead>
                   <tr className="text-gray-400 font-bold border-b border-gray-100">
                     <th className="pb-3 pr-4 uppercase tracking-wider text-xs w-32">GSM</th>
@@ -133,7 +133,7 @@ export default function PricingConfig() {
               </table>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
               <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                 <div className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Print Rates</div>
                 <div className="grid grid-cols-2 gap-4">
@@ -188,7 +188,7 @@ export default function PricingConfig() {
 
       <Card>
         <div className="text-lg font-bold text-gray-900 mb-4">Finishing Options</div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 items-end">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 items-end">
           <Input 
              label="Name" 
              value={newFinish.name} 
@@ -207,7 +207,7 @@ export default function PricingConfig() {
         </div>
 
         <div className="mt-8 overflow-x-auto">
-          <table className="w-full text-left text-sm">
+          <table className="w-full text-left text-sm whitespace-nowrap">
             <thead>
               <tr className="text-gray-400 font-bold border-b border-gray-100">
                 <th className="pb-3 pr-4 uppercase tracking-wider text-xs">Name</th>

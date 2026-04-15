@@ -216,7 +216,7 @@ export default function Login() {
   const hideForm = loginStatus === "loading" || loginStatus === "success";
 
   return (
-    <div className="min-h-screen relative bg-[#f8faf9] flex items-center justify-center p-6 text-gray-800 overflow-hidden">
+    <div className="min-h-screen relative bg-[#f8faf9] flex items-center justify-center p-4 sm:p-6 text-gray-800 overflow-y-auto">
       
       {/* Animated Background Blobs */}
       <style>
@@ -249,7 +249,7 @@ export default function Login() {
       <div className="absolute bottom-[-15%] left-[20%] w-[600px] h-[600px] bg-[#a8e6cf] rounded-full mix-blend-multiply filter blur-[120px] opacity-[0.4] animate-blob animation-delay-5000 z-0"></div>
 
       {/* Main Login Card - Adding slight glassmorphism so blobs peek through */}
-      <div className="w-full max-w-4xl bg-white/95 backdrop-blur-2xl rounded-[32px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_70px_-15px_rgba(62,139,111,0.2)] overflow-hidden flex min-h-[560px] relative z-10 hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/50">
+      <div className="w-full max-w-4xl bg-white/95 backdrop-blur-2xl rounded-[24px] sm:rounded-[32px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_70px_-15px_rgba(62,139,111,0.2)] overflow-hidden flex min-h-[500px] sm:min-h-[560px] relative z-10 hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/50">
         
         {/* LEFT PANEL */}
         <div className="hidden md:flex w-1/2 relative bg-[#FFFDF9]/80 backdrop-blur-sm flex-col items-center justify-center border-r border-gray-100">
@@ -266,7 +266,7 @@ export default function Login() {
         </div>
 
         {/* RIGHT PANEL - LOGIN FORM OR ANIMATED LOADER */}
-        <div className="w-full md:w-1/2 p-10 lg:p-16 flex flex-col justify-center bg-white/60 backdrop-blur-md z-10 relative overflow-hidden">
+        <div className="w-full md:w-1/2 p-6 sm:p-10 lg:p-16 flex flex-col justify-center bg-white/60 backdrop-blur-md z-10 relative overflow-hidden">
           
           {/* FORM VIEW */}
           <div className={`transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] w-full flex flex-col justify-center ${hideForm ? 'opacity-0 scale-95 absolute pointer-events-none' : 'opacity-100 scale-100'}`}>
