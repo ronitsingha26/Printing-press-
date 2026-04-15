@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f8faf9;
+  color: #1a202c;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.hover-glow {
+  transition: all 300ms ease;
+}
+.hover-glow:hover {
+  border-color: #3E8B6F;
+  box-shadow: 0 10px 25px -5px rgba(62, 139, 111, 0.15);
+}
+
+.gradient-text {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #3E8B6F, #2A6550);
+}
+
+.final-glow {
+  filter: drop-shadow(0 0 12px rgba(62, 139, 111, 0.2));
+}
+
+.sidebar-bg {
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+}
+
+/* Hide particles inherited from dark mode */
+.particles {
+  display: none !important;
+}
+.particle {
+  display: none !important;
+}
